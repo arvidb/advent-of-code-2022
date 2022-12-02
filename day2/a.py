@@ -2,7 +2,7 @@ import fileinput
 
 ROCK = 1
 PAPER = 2
-SCISCOR = 3
+SCISSOR = 3
 
 M = {
  "A": ROCK,
@@ -10,7 +10,7 @@ M = {
  "C": SCISCOR,
  "X": ROCK,
  "Y": PAPER,
- "Z": SCISCOR
+ "Z": SCISSOR
 }
 
 score = 0
@@ -22,8 +22,8 @@ for line in fileinput.input():
 
         if m1 == m2:
             score += m2 + 3
-        elif (m2 is ROCK and m1 is SCISCOR) or \
-             (m2 is SCISCOR and m1 is PAPER) or \
+        elif (m2 is ROCK and m1 is SCISSOR) or \
+             (m2 is SCISSOR and m1 is PAPER) or \
              (m2 is PAPER and m1 is ROCK):
             score += m2 + 6
         else:
