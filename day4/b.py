@@ -9,6 +9,6 @@ for line in fileinput.input():
     a = set(range(a[0], 1+a[1]))
     b = set(range(b[0], 1+b[1]))
 
-    total += 1 if len(set(a) & set(b)) != 0 else 0
+    total += 1 if len(a & b) != 0 else 0
 
 print(total)
